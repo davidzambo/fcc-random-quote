@@ -91,9 +91,9 @@ var setQuote = function(){
       $(".quote-body").text(json.quoteText);
       $(".quote-author").text(json.quoteAuthor);
       if (json.quoteAuthor === ''){
-        $('.quote-author').addClass('hidden');
+        $('.blockquote-footer').addClass('hidden');
       } else {
-        $('.quote-author').removeClass('hidden');
+        $('.blockquote-footer').removeClass('hidden');
       }
       var htmlJSON = encodeURI(json.quoteText);
       $("#tweet-this").attr('href', "https://twitter.com/intent/tweet?text="+htmlJSON+"&source=clicktotweet&related=clicktotweet").attr('target', '_blank');
