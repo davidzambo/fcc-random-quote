@@ -24,6 +24,13 @@ button{margin:40px;}
   margin-top: 80px;
   margin-bottom: 30px;
 }
+.quote-body, h1 {
+  text-shadow:
+    1px 1px 0 #aaa,
+    -1px 1px 0 #aaa,
+    -1px -1px 0 #aaa,
+    1px -1px 0 #aaa;
+}
 .quote-author{color: white;}
 .hidden{display: none;}
 .copyright {
@@ -79,6 +86,7 @@ var setQuote = function(){
     $('.quote-author').css('color', 'white');
   } else {
     $('.quote-author').css('color', 'black');
+    $('.quote-content h1').css('text-shadow', '2px 1px 0 black');
   };
   $.ajax({
     url: url,
